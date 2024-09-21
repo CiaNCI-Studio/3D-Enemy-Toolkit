@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://clid1430bou25"]
+
+[ext_resource type="Script" path="res://Example/example_enemy.gd" id="1_6nmso"]
+[ext_resource type="Script" path="res://addons/3dEnemyToolkit/FollowTarget.gd" id="2_w5i6f"]
+[ext_resource type="Script" path="res://addons/3dEnemyToolkit/RandomTarget3D.gd" id="3_lsadq"]
+[ext_resource type="Script" path="res://addons/3dEnemyToolkit/SimpleVision3D.gd" id="4_ivo35"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ck8vg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j3xwy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no7to"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hbteo"]
+
+[node name="ExampleEnemy" type="CharacterBody3D"]
+script = ExtResource("1_6nmso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ck8vg")
+
+[node name="Geometry" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_j3xwy")
+surface_material_override/0 = SubResource("StandardMaterial3D_no7to")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(0.778942, 0, 0, 0, -1.05042e-08, 0.550017, 0, -0.240309, -2.4042e-08, 0, 0.435177, -0.384868)
+mesh = SubResource("CylinderMesh_hbteo")
+surface_material_override/0 = SubResource("StandardMaterial3D_no7to")
+
+[node name="FollowTarget3D" type="NavigationAgent3D" parent="."]
+script = ExtResource("2_w5i6f")
+
+[node name="RandomTarget3D" type="Node3D" parent="."]
+script = ExtResource("3_lsadq")
+
+[node name="SimpleVision3D" type="Node3D" parent="."]
+script = ExtResource("4_ivo35")
+
+[connection signal="navigation_finished" from="FollowTarget3D" to="." method="_on_follow_target_3d_navigation_finished"]
+[connection signal="GetSight" from="SimpleVision3D" to="." method="_on_simple_vision_3d_get_sight"]
+[connection signal="LostSight" from="SimpleVision3D" to="." method="_on_simple_vision_3d_lost_sight"]

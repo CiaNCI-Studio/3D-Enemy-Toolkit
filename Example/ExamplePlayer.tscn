@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bavkswlqwhssp"]
+
+[ext_resource type="Script" path="res://Example/example_player.gd" id="1_e82bn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5egj7"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2uanj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6wbqj"]
+
+[node name="ExamplePlayer" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_e82bn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_5egj7")
+
+[node name="Geometry" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_2uanj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(0.778942, 0, 0, 0, -1.05042e-08, 0.550017, 0, -0.240309, -2.4042e-08, 0, 0.435177, -0.384868)
+mesh = SubResource("CylinderMesh_6wbqj")

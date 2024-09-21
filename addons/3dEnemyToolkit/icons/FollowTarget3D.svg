@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="FollowTarget3D.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="26.03125"
+     inkscape:cx="9.6422569"
+     inkscape:cy="9.815126"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     fill="#fc7f7f"
+     d="M 13.157727,2.8043217 10.71846,6.0566775 h 1.583085 C 12.189338,7.1299549 11.847841,7.6072382 11.420156,7.9064549 10.896527,8.273158 10.027334,8.3991868 9.0109732,8.5000098 7.994612,8.6008329 6.8310817,8.6797025 5.8301692,9.3805852 5.1048938,9.8887658 4.5845169,10.723808 4.3519735,11.897909 a 1.6261779,1.6261779 0 1 0 1.6099161,0.148795 c 0.1569262,-0.719584 0.4496382,-1.0871 0.8025188,-1.333466 0.5236293,-0.366703 1.3928214,-0.492732 2.4091826,-0.593555 1.016361,-0.100823 2.179892,-0.1796922 3.180805,-0.8805753 0.856182,-0.5992466 1.426971,-1.6521968 1.574953,-3.1824302 h 1.667645 z"
+     id="path1"
+     style="stroke-width:0.813089" />
+  <g
+     id="g2"
+     transform="matrix(0.6789573,0,0,0.6789573,-1.0451038,0.07134281)">
+    <path
+       fill="#e0e0e0"
+       d="M 8,1 C 5,1 3,3 3,6 3,9 6,12 8,15 V 8.5 a 2.5,2.5 0 0 1 0,-5 z"
+       id="path1-7" />
+    <path
+       fill="#fc7f7f"
+       d="m 8,1 v 2.5 a 2.5,2.5 0 0 1 0,5 V 15 C 10,12 13,9 13,6 13,3 11,1 8,1 Z"
+       id="path2" />
+  </g>
+</svg>
