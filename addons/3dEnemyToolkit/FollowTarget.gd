@@ -21,7 +21,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if fixedTarget:
 		go_to_location(targetPosition)	
-	else:
+	elif target:
 		go_to_location(target.global_position)
 		if target and parent.global_position.distance_to(target.global_position) <= ReachTargetMinDistance:
 			emit_signal("ReachedTarget", target)
